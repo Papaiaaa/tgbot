@@ -116,7 +116,7 @@ def mess(message):
 
     elif get_message_bot == "ремонт компьютеров":
         markup = types.InlineKeyboardMarkup()
-        final_message = "ремонт компьютеров: 1)....\n2)...\n3@!"
+        final_message = "ремонт компьютеров: 1)....\n2)...\n3555@!"
         bot.send_message(message.chat.id, final_message, parse_mode='html', reply_markup=markup)
 
     elif get_message_bot == "telegram канал":
