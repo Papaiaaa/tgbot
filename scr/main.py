@@ -2,11 +2,12 @@
 
 from datetime import datetime
 
-import config
 import telebot
 from telebot import types
 
-TOKEN = "5762860883:AAEJnphqIYh7H6gYlsRUK3U_dbgte6Iiyfw"
+import config
+TOKEN =config.TOKEN1
+#TOKEN = "5762860883:AAEJnphqIYh7H6gYlsRUK3U_dbgte6Iiyfw"
 
 bot=telebot.TeleBot(TOKEN)
 
@@ -53,7 +54,7 @@ def start(message):
     btn8 = types.KeyboardButton('Ремонт компьютеров')
     btn9 = types.KeyboardButton('Telegram канал')
     markup.add(btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9)
-    greetings = f'Привет!, <b>{message.from_user.first_name} {message.from_user.last_name}</b>'
+    greetings = f'Привет, <b>{message.from_user.first_name} {message.from_user.last_name}</b>'
     bot.send_message(message.chat.id, greetings, parse_mode='html', reply_markup=markup)
 
 ###################################
@@ -140,6 +141,7 @@ def mess(message):
         markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9)
         final_message = "Выбери интересующий тебя пункт (else)"
         bot.send_message(message.chat.id, final_message, parse_mode='html', reply_markup=markup)
+
 
 
 bot.polling(none_stop=True)
