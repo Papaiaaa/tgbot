@@ -7,7 +7,6 @@ from telebot import types
 
 import config
 TOKEN =config.TOKEN1
-#TOKEN = "5762860883:AAEJnphqIYh7H6gYlsRUK3U_dbgte6Iiyfw"
 
 bot=telebot.TeleBot(TOKEN)
 
