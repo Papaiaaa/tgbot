@@ -12,7 +12,7 @@ bot=telebot.TeleBot(TOKEN)
 current_datetime = datetime.now()
 
 ###################################
-#############КОМАНДЫ###############
+#############КОМАНДЫ123###############
 ###################################
 @bot.message_handler(commands=['menu'])
 def menu(message):
@@ -116,7 +116,7 @@ def mess(message):
 
     elif get_message_bot == "ремонт компьютеров":
         markup = types.InlineKeyboardMarkup()
-        final_message = "ремонт компьютеров: 1)....\n2)...\n3555@!"
+        final_message = "ремонт компьютеров: 1)....\n2)...\n3@!"
         bot.send_message(message.chat.id, final_message, parse_mode='html', reply_markup=markup)
 
     elif get_message_bot == "telegram канал":
